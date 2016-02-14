@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <title><?php echo $this->translate('Beauty company')?></title>
+        <?=$this->headMeta()?>
+        <?=$this->headTitle()?>
+        <base href="http://<?php echo $_SERVER['HTTP_HOST'].$this->baseUrl ?>/" /> 
+        <?=$this->headStyle()?>
+        <?php 
+        
+        $this->headScript()->prependFile('/bootstrap/js/bootstrap.min.js')
+                                ->prependFile('/js/layout.js')
+                                ->prependFile('/js/login.js')
+					            ->prependFile('/js/jquery-2.1.4.min.js');
+         
+        $this->headLink()->appendStylesheet('/bootstrap/css/bootstrap-theme.min.css')
+                        ->appendStylesheet('/bootstrap/css/bootstrap.min.css')
+                        ->appendStylesheet('/css/site.css');
+
+        echo $this->headScript();
+        echo $this->headLink();?>
+    
+       <script type="text/javascript">var baseUrl="http://<?php  echo $_SERVER['HTTP_HOST'];?>/";</script> 
+    </head>
+	
+	<body>
+	    <div id="layout_login" class="login">
+	       <?= $this->render('layout/login')?>
+	    </div>
+        <div class="wrap">
+            <div class="container">
+                <div class="row">
+                    <a id="login_button" class="btn btn-default">
+                        <?php echo $this->translate('Log in');?>
+                    </a>
+
+                    <a href="<?php echo $this->translate('business_index_route')?>" class="btn btn-default">
+                        <?php echo $this->translate('List your business');?>
+                    </a>
+
+                    <img src="/img/logo.png" style="width:200px; margin:0 auto;" class="img-responsive"/>
+                    
+                    <span class="venue-search beauty-complete-small-home pull-right" data-no-results-text="No matching venues found">
+                        <input type="text" placeholder="Search by venue name" class="ui-autocomplete-input ui-autocomplete-loading" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <span class="input-icon"><span class="site-search-small"></span></span>
+                        <span class="delete hide" style="display: none;"><span class="site-delete-small"></span></span>
+                        <span class="searching hide" style="display: none;"></span>
+                        <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all search-results" role="listbox" aria-activedescendant="ui-active-menuitem" style="display: none; width: 282px; top: 29px; left: 0px;">
+                            <li class="ui-autocomplete-error">No matching venues found</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+            
+           <!--  <div id="header-container">
+                <?php //echo $this->render('layout/header') ?>
+            </div> 
+            <div id="wrap">-->
+				<?=$this->layout()->content?>
+                <div class="clear"></div>
+           <!-- </div> -->
+            <div id="footer-container">
+				<?php //echo $this->render('layout/footer')?>
+            </div>
+        </div>
+        <?=$this->inlineScript()?>
+       
+    </body>
+</html>

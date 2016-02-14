@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+
+		<div>
+            <?php $this->form->prepare();?>
+        	<?= $this->form()->openTag($this->form);?>
+        	<h3>
+				<strong><?=$this->translate('Create a beauty profile'); ?></strong>
+			</h3>
+			
+			<?= $this->formLabel($this->form->get('email')); ?>
+			<?= $this->formEmail($this->form->get('email')); ?><br/>
+        	
+        	<?= $this->formLabel($this->form->get('password')); ?>
+        	<?= $this->formPassword($this->form->get('password')); ?>
+        	<?= $this->formElementErrors($this->form->get('password'));?><br/>
+        	
+            <?= $this->formRow($this->form->get('name')); ?><br/>
+            
+            <?= $this->formRow($this->form->get('surname')); ?><br/>
+            
+            <?= $this->formRow($this->form->get('phone')); ?><br/>
+            
+            <?= $this->formRow($this->form->get('female')); ?><br/>
+            
+            <?= $this->formInput($this->form->get('submitButton')); ?>
+		</div>
+
+		<?= $this->form()->closeTag();?>
+	</div>
+</div>

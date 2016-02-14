@@ -1,0 +1,21 @@
+<?=$this->headScript();
+   $this->headLink()->appendStylesheet('/css/idiomas.css')
+         			->appendStylesheet('/css/user.css')
+         			->appendStylesheet('/css/style.css');
+   
+
+         					?>
+
+
+
+<?php  $this->layout()->setTemplate('layout/error'); ?> 
+<div class="errorWeb">
+<?php 
+	echo $this->translate('No tienes los permisos adecuados para acceder a este contenido.');
+	echo "</br>";
+	echo  $this->translate('Disculpa las molestias.');
+	echo "</br>";
+	echo $this->translate('Puedes dirigirte a nuestra página de') . ' <a href="' . $this->translate('initial_lang'). '"/>' .$this->translate('Inicio') . '</a> ' . $this->translate('o contactarnos directamente en nuestro chat.'); 
+?>
+</div>
+<!-- <img src="/images/error/bg_403.png" alt="Error page"/> -->

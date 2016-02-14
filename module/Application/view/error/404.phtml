@@ -1,0 +1,29 @@
+<?=$this->headScript();
+   $this->headLink()->appendStylesheet('/css/idiomas.css')
+         			->appendStylesheet('/css/user.css')
+         			->appendStylesheet('/css/skel.css')
+         			->appendStylesheet('/css/style.css');
+   $this->headScript()->appendFile ('/js/skel.min.js' )
+   
+
+         					?>
+
+
+
+<?php  $this->layout()->setTemplate('layout/error'); ?> 
+
+<div class="texto1" style="
+         					margin: 0 auto;
+         					width: 50%;
+
+         					">
+<?php 
+	echo $this->translate('La pagina solicitada puede no estar disponible, haber cambiado de dirección o no existir.');
+	echo "</br>";
+	echo  $this->translate('Disculpe las molestias.');
+	echo "</br>";
+	echo $this->translate('Puedes dirigirte a nuestra página de') . ' <a href="' . $this->translate('initial_lang'). '"/>' .$this->translate('Inicio') . '</a> ' . $this->translate('o contactarnos directamente en nuestro chat.'); 
+?>
+</div>
+
+<!--  <img src="/images/error/bg_404.png" alt="Error page"/>-->

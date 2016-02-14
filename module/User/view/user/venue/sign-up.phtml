@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+
+        <div>
+            <?php $this->form->prepare();?>
+            <?= $this->form()->openTag($this->form);?>
+            <h3>
+                <strong><?=$this->translate('Create a beauty venue'); ?></strong>
+            </h3>
+
+            <?= $this->formLabel()->openTag($this->form->get('name')); ?>
+            <?= $this->translate('Name')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formText($this->form->get('name')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('address')); ?>
+            <?= $this->translate('Address')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTextArea($this->form->get('address')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('municipality')); ?>
+            <?= $this->translate('Municipality')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formSelect($this->form->get('municipality')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('description')); ?>
+            <?= $this->translate('Description')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTextArea($this->form->get('description')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('phone1')); ?>
+            <?= $this->translate('Phone')." 1"?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formText($this->form->get('phone1')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('phone2')); ?>
+            <?= $this->translate('Phone')." 2"?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formText($this->form->get('phone2')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('phone3')); ?>
+            <?= $this->translate('Phone')." 3"?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formText($this->form->get('phone3')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('url')); ?>
+            <?= $this->translate('Web Site')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formText($this->form->get('url')); ?><br/>
+
+
+            <?= $this->formLabel()->openTag($this->form->get('workdaysOpen')); ?>
+            <?= $this->translate('Opening hours (workdays)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('workdaysOpen')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('workdaysClose')); ?>
+            <?= $this->translate('Closing hours (workdays)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('workdaysClose')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('saOpen')); ?>
+            <?= $this->translate('Opening hours (Saturday)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('saOpen')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('saClose')); ?>
+            <?= $this->translate('Closing hours (Saturday)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('saClose')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('suOpen')); ?>
+            <?= $this->translate('Opening hours (Sunday)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('suOpen')); ?><br/>
+
+            <?= $this->formLabel()->openTag($this->form->get('suClose')); ?>
+            <?= $this->translate('Closing hours (Sunday)')?>
+            <?= $this->formLabel()->closeTag(); ?>
+            <?= $this->formTime($this->form->get('suClose')); ?><br/>
+
+            <?= $this->formRow($this->form->get('submitButton')); ?>
+        </div>
+
+        <?= $this->form()->closeTag();?>
+    </div>
+</div>

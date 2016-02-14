@@ -1,0 +1,51 @@
+<div id="content-login">
+	<div>
+    	<div class="row">
+	
+        	<div class="pull-left">
+        		<div id="loginUsuario">
+        			<?php $this->loginForm->prepare();?>
+        			<?php $this->loginForm->setAttribute('action', $this->translate('login_route'));?>
+        			<?= $this->form()->openTag($this->loginForm);?>
+        			<h3>
+        				<strong><?=$this->translate('Enter email and password'); ?></strong>
+        			</h3>
+        			
+        			<table>
+        				<tbody>
+        					<tr>
+        						<th><?php echo $this->formLabel($this->loginForm->get('email')); ?></th>
+        						<td><?php echo $this->formInput($this->loginForm->get('email')); ?> </td>
+        					</tr>
+        					
+        					<tr>
+        						<th><?php echo $this->formLabel($this->loginForm->get('password')); ?></th>
+        						<td><?php echo $this->formInput($this->loginForm->get('password')); ?> </td>
+        					</tr>
+        					
+        					<tr class="moreheighttr">
+        						<th></th>
+        						<td><a href="<?php echo $this->translate('recover_password_route')?>" title="<?='Forgotten your password?'?>"  tabindex="4" >
+        						  <?php echo $this->translate('Forgotten your password?') ?></a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td colspan=2><?php echo $this->formInput($this->loginForm->get('buttonLogin')); ?> </td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			<?= $this->form()->closeTag();?>
+        		</div>
+        
+        	</div>
+        	
+        	
+        	<div class='pull-right'>
+        	   <a href="<?php echo $this->translate('sign_up_route')?>" class="btn btn-default">
+        	       <?php echo $this->translate('Sign up')?>
+        	   </a>
+        	</div>
+	   </div>
+	</div>
+</div>
