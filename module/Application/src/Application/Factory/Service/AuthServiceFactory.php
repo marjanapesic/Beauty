@@ -17,8 +17,8 @@ class AuthServiceFactory implements FactoryInterface {
 	    $credentialValidationCallback = function($dbCredential, $requestCredential) {
 	        return (new Bcrypt())->verify($requestCredential, $dbCredential);
 	    };
-	    $authAdapter = new AuthAdapter($dbAdapter, 'user', 'email', 'password', $credentialValidationCallback);
-		
+	    $authAdapter = new AuthAdapter($dbAdapter, 'users', 'email', 'password', $credentialValidationCallback);
+
 		$authService = new \Zend\Authentication\AuthenticationService ();
 		$authService->setAdapter ($authAdapter);
 		$authService->setStorage ($serviceLocator->get ( 'Application\Model\MyAuthStorage' ));

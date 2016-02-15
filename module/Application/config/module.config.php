@@ -38,7 +38,7 @@ return array(
 		),
         'abstract_factories' => array(
             'Application\AbstractFactory\FormAbstractFactory',
-            'Application\AbstractFactory\MapperAbstractFactory'
+//            'Application\AbstractFactory\MapperAbstractFactory'
         ),
 		'invokables' => array(
 		    'Application\Model\MyAuthStorage' => 'Application\Model\MyAuthStorage',

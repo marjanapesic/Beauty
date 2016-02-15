@@ -119,15 +119,13 @@ return array(
 		    'User\Form\SignUpForm' => 'User\Factory\Form\SignUpFactory',
 		    'User\Form\VenueSignUpForm' => 'User\Factory\Form\VenueSignUpFactory',
 		),
-		'aliases' => array(
-		),
     ),
 
     'controllers' => array(
 
-       'factories' => array(
-           'User\Controller\User' => 'User\Controller\UserControllerFactory',
-           'User\Controller\Venue' => 'User\Controller\VenueControllerFactory',
+       'invokables' => array(
+           'User\Controller\User' => 'User\Controller\UserController',
+           'User\Controller\Venue' => 'User\Controller\VenueController',
 	   ),
     ),
 	'view_helpers' => array(

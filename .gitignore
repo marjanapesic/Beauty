@@ -1,0 +1,7 @@
+# Git ignore file
+/vendor/
+/composer.phar
+/.project
+/.buildpath
+/.idea
+/.settings

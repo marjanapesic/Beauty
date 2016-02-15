@@ -1,8 +1,7 @@
 <?php
 namespace User\Form;
 
-use Application\Entity\Municipality;
-use Application\Mapper\MunicipalityMapper;
+
 use Zend\Form\Form;
 use Zend\Form\Element;
 use Zend\InputFilter\InputFilter;
@@ -12,12 +11,8 @@ class VenueSignUpForm extends Form {
 
     protected $dbAdapter;
 
-    /** @var \Application\Mapper\MunicipalityMapper */
-    protected $municipalityMapper;
 
-    public function __construct($municipalityMapper, $options = null){
-
-        $this->municipalityMapper = $municipalityMapper;
+    public function __construct($municipalities, $options = null){
 
         parent::__construct('businessSignUp');
 
@@ -47,8 +42,7 @@ class VenueSignUpForm extends Form {
         ));
 
         $municipalityArray = [];
-        $municipalities = $this->municipalityMapper->getCollection();
-        /** @var Municipality $municipality */
+        /** @var \Application\Entity\Municipalities $municipality */
         foreach($municipalities as $municipality){
             $municipalityArray[$municipality->getId()] = $municipality->getName();
         }
@@ -246,18 +240,22 @@ class VenueSignUpForm extends Form {
 
             $this->filter->add($factory->createInput([
                 'name' => 'workdaysOpen',
+                'required' => false
             ]));
 
             $this->filter->add($factory->createInput([
                 'name' => 'workdaysClose',
+                'required' => false
             ]));
 
             $this->filter->add($factory->createInput([
                 'name' => 'saOpen',
+                'required' => false
             ]));
 
             $this->filter->add($factory->createInput([
                 'name' => 'saClose',
+                'required' => false
             ]));
 
             $this->filter->add($factory->createInput([

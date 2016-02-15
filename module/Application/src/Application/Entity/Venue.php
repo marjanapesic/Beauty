@@ -106,100 +106,100 @@ class Venue
     private $approved;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="mo_open", type="time", nullable=false)
+     * @ORM\Column(name="mo_open", type="string", length=128, nullable=false)
      */
     private $moOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="mo_close", type="time", nullable=false)
+     * @ORM\Column(name="mo_close", type="string", length=128, nullable=false)
      */
     private $moClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="tu_open", type="time", nullable=false)
+     * @ORM\Column(name="tu_open", type="string", length=128, nullable=false)
      */
     private $tuOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="tu_close", type="time", nullable=false)
+     * @ORM\Column(name="tu_close", type="string", length=128, nullable=false)
      */
     private $tuClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="we_open", type="time", nullable=false)
+     * @ORM\Column(name="we_open", type="string", length=128, nullable=false)
      */
     private $weOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="we_close", type="time", nullable=false)
+     * @ORM\Column(name="we_close", type="string", length=128, nullable=false)
      */
     private $weClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="th_open", type="time", nullable=false)
+     * @ORM\Column(name="th_open", type="string", length=128, nullable=false)
      */
     private $thOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="th_close", type="time", nullable=false)
+     * @ORM\Column(name="th_close", type="string", length=128, nullable=false)
      */
     private $thClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="fr_open", type="time", nullable=false)
+     * @ORM\Column(name="fr_open", type="string", length=128, nullable=false)
      */
     private $frOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="fr_close", type="time", nullable=false)
+     * @ORM\Column(name="fr_close", type="string", length=128, nullable=false)
      */
     private $frClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="sa_open", type="time", nullable=false)
+     * @ORM\Column(name="sa_open", type="string", length=128, nullable=false)
      */
     private $saOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="sa_close", type="time", nullable=false)
+     * @ORM\Column(name="sa_close", type="string", length=128, nullable=false)
      */
     private $saClose;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="su_open", type="time", nullable=false)
+     * @ORM\Column(name="su_open", type="string", length=128, nullable=false)
      */
     private $suOpen;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="su_close", type="time", nullable=false)
+     * @ORM\Column(name="su_close", type="string", length=128, nullable=false)
      */
     private $suClose;
 
@@ -506,7 +506,7 @@ class Venue
     /**
      * Set moOpen
      *
-     * @param \DateTime $moOpen
+     * @param string $moOpen
      *
      * @return Venue
      */
@@ -520,7 +520,7 @@ class Venue
     /**
      * Get moOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getMoOpen()
     {
@@ -530,7 +530,7 @@ class Venue
     /**
      * Set moClose
      *
-     * @param \DateTime $moClose
+     * @param string $moClose
      *
      * @return Venue
      */
@@ -544,7 +544,7 @@ class Venue
     /**
      * Get moClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getMoClose()
     {
@@ -554,7 +554,7 @@ class Venue
     /**
      * Set tuOpen
      *
-     * @param \DateTime $tuOpen
+     * @param string $tuOpen
      *
      * @return Venue
      */
@@ -568,7 +568,7 @@ class Venue
     /**
      * Get tuOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getTuOpen()
     {
@@ -578,7 +578,7 @@ class Venue
     /**
      * Set tuClose
      *
-     * @param \DateTime $tuClose
+     * @param string $tuClose
      *
      * @return Venue
      */
@@ -592,7 +592,7 @@ class Venue
     /**
      * Get tuClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getTuClose()
     {
@@ -602,7 +602,7 @@ class Venue
     /**
      * Set weOpen
      *
-     * @param \DateTime $weOpen
+     * @param string $weOpen
      *
      * @return Venue
      */
@@ -616,7 +616,7 @@ class Venue
     /**
      * Get weOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getWeOpen()
     {
@@ -626,7 +626,7 @@ class Venue
     /**
      * Set weClose
      *
-     * @param \DateTime $weClose
+     * @param string $weClose
      *
      * @return Venue
      */
@@ -640,7 +640,7 @@ class Venue
     /**
      * Get weClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getWeClose()
     {
@@ -650,7 +650,7 @@ class Venue
     /**
      * Set thOpen
      *
-     * @param \DateTime $thOpen
+     * @param string $thOpen
      *
      * @return Venue
      */
@@ -664,7 +664,7 @@ class Venue
     /**
      * Get thOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getThOpen()
     {
@@ -674,7 +674,7 @@ class Venue
     /**
      * Set thClose
      *
-     * @param \DateTime $thClose
+     * @param string $thClose
      *
      * @return Venue
      */
@@ -688,7 +688,7 @@ class Venue
     /**
      * Get thClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getThClose()
     {
@@ -698,7 +698,7 @@ class Venue
     /**
      * Set frOpen
      *
-     * @param \DateTime $frOpen
+     * @param string $frOpen
      *
      * @return Venue
      */
@@ -712,7 +712,7 @@ class Venue
     /**
      * Get frOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getFrOpen()
     {
@@ -722,7 +722,7 @@ class Venue
     /**
      * Set frClose
      *
-     * @param \DateTime $frClose
+     * @param string $frClose
      *
      * @return Venue
      */
@@ -736,7 +736,7 @@ class Venue
     /**
      * Get frClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getFrClose()
     {
@@ -746,7 +746,7 @@ class Venue
     /**
      * Set saOpen
      *
-     * @param \DateTime $saOpen
+     * @param string $saOpen
      *
      * @return Venue
      */
@@ -760,7 +760,7 @@ class Venue
     /**
      * Get saOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSaOpen()
     {
@@ -770,7 +770,7 @@ class Venue
     /**
      * Set saClose
      *
-     * @param \DateTime $saClose
+     * @param string $saClose
      *
      * @return Venue
      */
@@ -784,7 +784,7 @@ class Venue
     /**
      * Get saClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSaClose()
     {
@@ -794,7 +794,7 @@ class Venue
     /**
      * Set suOpen
      *
-     * @param \DateTime $suOpen
+     * @param string $suOpen
      *
      * @return Venue
      */
@@ -808,7 +808,7 @@ class Venue
     /**
      * Get suOpen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSuOpen()
     {
@@ -818,7 +818,7 @@ class Venue
     /**
      * Set suClose
      *
-     * @param \DateTime $suClose
+     * @param string $suClose
      *
      * @return Venue
      */
@@ -832,7 +832,7 @@ class Venue
     /**
      * Get suClose
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSuClose()
     {

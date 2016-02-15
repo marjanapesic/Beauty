@@ -144,7 +144,7 @@ class SignUpForm extends Form {
 	                ),
 	                new \Zend\Validator\Db\NoRecordExists(
 	                    array(
-	                        'table'   => 'user',
+	                        'table'   => 'users',
 	                        'field'   => 'email',
 	                        'adapter' => $this->dbAdapter
                         )
